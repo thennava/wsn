@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>WSN</title>
+    <script>
+      setInterval(function() {
+        location.reload();
+      }, 20000);
+        function showConfirm() {
+        var result = confirm("REQUEST HAS BEEN SENT. SYSTEM WILL BE TURNED ON WITHIN 1 MINUTE");
+        if (result) {
+        // User clicked "OK"
+        } else {
+        // User clicked "Cancel"
+        }
+        }
+
+        function showConfirm1() {
+        var result = confirm("REQUEST HAS BEEN SENT. SYSTEM WILL BE TURNED OFF WITHIN 1 MINUTE");
+        if (result) {
+        // User clicked "OK"
+        } else {
+        // User clicked "Cancel"
+        }
+        }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+      body {
+        font-family: 'Merriweather', serif;
+        margin: 20px;
+        padding: 0;
+      }
+
+      h1 {
+        font-size: 3rem;
+        font-weight: 900;
+        text-align: center;
+        margin: 2rem 0;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .card {
+        position: absolute;
+        bottom: 1rem;
+        left: 27.5%;
+        width: 700px;
+        height: 80px;
+        border-radius: 1rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+        box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,5);
+      }
+
+      .card h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .card ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .card li {
+        margin-bottom: 0.5rem;
+      }
+
+      .iframe-container {
+        width: 48%;
+        height: 50vh;
+        margin-bottom: 2rem;
+        box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1);
+      }
+
+      .iframe-container h2 {
+        font-size: 1.5rem;
+        margin: 0;
+        padding: 1rem;
+        background-color: #eee;
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .iframe:first-child {
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+      }
+      .iframe:last-child {
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+      }
+      a.xe {
+        box-shadow: inset 0 0 0 0 #1C1C1C;
+        color: #000000;
+        margin: 0 -.25rem;
+        padding: 0 .25rem;
+        display: flex;
+        justify-content: space-between;
+        transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+      }
+      a.ex1 {
+        color: black; /* set the default color to black */
+      }
+
+      a.ex1:hover {
+        color: red; /* set the color to red when hovering over the link */
+      }
+      a.xe:hover {
+        box-shadow: inset 100px 0 0 0 #1C1C1C;
+        color: white;
+      }
+      button {
+      --c:  #229091; /* the color*/
+
+      box-shadow: 0 0 0 .1em inset var(--c); 
+      --_g: linear-gradient(var(--c) 0 0) no-repeat;
+      background: 
+      var(--_g) calc(var(--_p,0%) - 100%) 0%,
+      var(--_g) calc(200% - var(--_p,0%)) 0%,
+      var(--_g) calc(var(--_p,0%) - 100%) 100%,
+      var(--_g) calc(200% - var(--_p,0%)) 100%;
+      background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+      outline-offset: .1em;
+      margin-left: auto;
+      transition: background-size .4s, background-position 0s .4s;
+      }
+      button:hover {
+      --_p: 100%;
+      transition: background-position .4s, background-size 0s;
+      }
+      button:active {
+      box-shadow: 0 0 9e9q inset #0009; 
+      background-color: var(--c);
+      color: #fff;
+      }
+      button {
+      font-family: system-ui, sans-serif;
+      font-size: 20px;
+      cursor: pointer;
+      padding: .1em .6em;
+      font-weight: bold;  
+      margin-left: auto;
+      border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><strong>WSN BASED SWITCH GEARS CONTROL</strong></h1>
+    <h2><strong><center>Live Status</center></strong></h2>
+
+    <div class="container">
+      <div class="iframe-container">
+        <h2 class="xe"> <a href="https://datawrapper.dwcdn.net/ljp30/1221/" class="xe" style="text-decoration:none;">NODE 1</a>
+          <button onclick="window.open('https://datawrapper.dwcdn.net/ljp30/1221/','_self'); showConfirm()">ON</button>
+          <button onclick="window.open('https://datawrapper.dwcdn.net/ljp30/1221/','_self'); showConfirm1()" style="--c:#E95A49;">OFF</button>
+        </h2>
+
+        <iframe class="iframe" src="https://datawrapper.dwcdn.net/ljp30/1221/"></iframe>
+      </div>
+
+      <div class="iframe-container">
+        <h2><a class="xe" href="https://datawrapper.dwcdn.net/tKjY7/135/" style="text-decoration:none;">NODE 2</a>
+          <button onclick="window.open('https://datawrapper.dwcdn.net/tKjY7/135/','_self'); showConfirm()">ON</button>
+          <button onclick="window.open('https://datawrapper.dwcdn.net/tKjY7/135/','_self'); showConfirm1()" style="--c:#E95A49;">OFF</button>
+        </h2>
+        <iframe class="iframe" src="https://datawrapper.dwcdn.net/tKjY7/135/"></iframe>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3><center>Made with ❤️ by Batch-9</center></h3>
+      <ul>
+        <li><center><p>
+          <a class="ex1" href="https://www.linkedin.com/in/thirumoorthi-p-40857a129/" style="text-decoration:none;">Dr.P.THIRUMOORTHI</a> &nbsp; 
+          <a class="ex1" href="https://www.linkedin.com/in/naveenkumar-16/" style="text-decoration:none;">NAVEEN KUMAR M</a> &nbsp; 
+          <a class="ex1" href="https://www.linkedin.com/in/thennavansp/" style="text-decoration:none;">THENNAVAN S P</a> &nbsp;
+          <a class="ex1" href="https://www.linkedin.com/in/dushyant-varun-207659226/" style="text-decoration:none;">DUSHYANT VARUN R</a>&nbsp;   
+          </p></center></li>
+      </ul>
+    </div>
+  </body>
+</html>
